@@ -19,22 +19,10 @@ void ADC_init() {
 }
 
 void TickFCT(unsigned short p_value) {
-	if (p_value < 103) {
+	if (p_value >= 0x198) {
 		tmpB = 0x01;
-	} else if (p_value < 205) {
-		tmpB = 0x02;
-	} else if (p_value < 307) {
-		tmpB = 0x04;
-	} else if (p_value < 409) {
-		tmpB = 0x08;
-	} else if (p_value < 511) {
-		tmpB = 0x10;
-	} else if (p_value < 613) {
-		tmpB = 0x20;
-	} else if (p_value < 715) {
-		tmpB = 0x40;
 	} else {
-		tmpB = 0x80;
+		tmpB = 0x00;
 	}
 }
 
